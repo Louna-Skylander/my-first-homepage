@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.grid-container {
+    max-width: 1200px;
+    width: 100%;
+    background-color: #c53163;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 640px auto auto auto 225px 40px;
+    grid-template-areas: 
+    "top"
+    "main"
+    "gallery"
+    "contact"
+    "bottom"
+    "footer"
+    ;
+}
+
+header {
+    background-image: url(image/header.jpg);
+}
+
+.top {
+    grid-area: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    color: rgba(255,255,255,0.8);
+}
+
+.top nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
