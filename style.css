@@ -1,41 +1,66 @@
+/* 
+
+Pink #c53163
+White #fff
+Gray #2e2e2e
+Gray 2 #333
+White 2 #f2f2f2
+
+*/
+
 body {
     margin: 0;
     height: 100vh;
-}
-
-.grid-container {
-    max-width: 1200px;
-    width: 100%;
-    background-color: #c53163;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 640px auto auto auto 225px 40px;
+    grid-template-rows: 640px auto auto 225px 40px;
     grid-template-areas: 
     "top"
-    "main"
+    "contect"
     "gallery"
-    "contact"
+    "contact-us"
     "bottom"
-    "footer"
-    ;
-}
-
-header {
-    background-image: url(image/header.jpg);
+    "footer";
 }
 
 .top {
     grid-area: top;
+    background-color: #c53163;
+    background-image:url(image/header.jpg);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    font-family: sans-serif;
-    color: rgba(255,255,255,0.8);
+}
+
+.top nav > * {
+    padding: 0 10px;
 }
 
 .top nav {
+    height: 100px;
+    width: 100%;
+    font-family: sans-serif;
+    font-style: bold;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a.active {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.top header {
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+}
+
